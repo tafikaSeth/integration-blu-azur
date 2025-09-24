@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply m-0 p-0;
+  }
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./assets/fonts/Mulish-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./assets/fonts/Mulish-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.font-mulish {
+  font-family: var(--font-mulish);
+}
+
+:root {
+  --font-mulish: 'Mulish', sans-serif;
+}
