@@ -22,7 +22,7 @@ const AppartementSection: React.FC = () => {
                         <h3 className="mt-6 font-semibold text-xl sm:text-2xl md:text-3xl">
                             Les inclusions :
                         </h3>
-                        <ul className="mt-2 list-disc list-inside space-y-1 text-sm sm:text-base md:text-lg">
+                        <ul className="mt-2 list-disc list-inside space-y-1 text-sm sm:text-base md:text-lg marker:text-blue-500">
                             <li>Stationnement privé</li>
                             <li>Piscine extérieure avec chaises longues</li>
                             <li>Linge de lit et serviettes</li>
