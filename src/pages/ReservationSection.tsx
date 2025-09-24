@@ -1,6 +1,6 @@
 import React from "react";
 import CustomButton from "../components/ui/button";
-import { BACKGROUND_RESRVATION_IMAGE } from "../constants";
+import { BACKGROUND_RESERVATION_IMAGE } from "../constants";
 
 
 const ReservationsSection: React.FC = () => {
@@ -8,7 +8,7 @@ const ReservationsSection: React.FC = () => {
     return (
         <section
             className="relative w-full bg-cover bg-center text-white"
-            style={{ backgroundImage: `url(${BACKGROUND_RESRVATION_IMAGE})` }}
+            style={{ backgroundImage: `url(${BACKGROUND_RESERVATION_IMAGE})` }}
         >
             <div className="absolute inset-0 bg-gradient-to-r from-[#4097FF] via-blue-600/50 to-transparent"></div>
             <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center min-h-[60vh] py-20">
