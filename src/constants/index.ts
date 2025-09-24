@@ -52,7 +52,7 @@ export const TOURISM_DATA_TOP: CardData[] = [
   {
     id: '1',
     title: 'Un patrimoine culturel d\'exception',
-    description: 'Du Picos au Cotentin, la Côte d\'Azur à toujours été une terre d\'inspiration pour les artistes...',
+    description: 'De Picasso à Cocteau, la Côte d’Azur a toujours été une terre d’inspiration pour les artistes. Musées, galeries et sites historiques jalonnent la région, offrant un voyage au cœur de l’art et de l’histoire entre Saint-Raphaël, Antibes et Saint-Paul-de-Vence.',
     imageUrl: STPAUL_IMG,
     links: [
       { text: 'Le Festival de Cannes', url: '#' },
@@ -64,7 +64,7 @@ export const TOURISM_DATA_TOP: CardData[] = [
   {
     id: '2',
     title: 'Le sport au rythme de la Méditerranée',
-    description: 'Du Grand Prix de F1 de Monaco aux jardins de Turquie...',
+    description: 'Du légendaire Grand Prix de Monaco aux défis de l’Ironman, en passant par le Marathon des Alpes-Maritimes, la région vibre au rythme des grands événements sportifs. Cyclisme sur la Route des Crêtes, golf sur des parcours prestigieux et voile lors des Régates de Saint-Tropez complètent ce décor idéal pour les amateurs de sport et d’adrénaline',
     imageUrl: SPORT_IMG,
     links: [
       { text: 'Grand prix de Monaco', url: '#' },
@@ -80,7 +80,7 @@ export const TOURISM_DATA_BOTTOM: CardData[] = [
   {
     id: '3',
     title: 'Une destination gourmande et authentique',
-    description: 'Les marchés provençaux dévoilent des saveurs du terroir...',
+    description: 'Les marchés provençaux dévoilent des saveurs du terroir, entre fromages affinés, huile d’olive et spécialités méditerranéennes. Vignerons passionnés et restaurants raffinés offrent une expérience gastronomique où tradition et créativité se rencontrent dans un cadre enchanteur.',
     imageUrl: GOURMAND_IMG,
     buttonText: 'Consulter la liste des meilleurs restaurants',
     variant: 'default'
@@ -88,14 +88,14 @@ export const TOURISM_DATA_BOTTOM: CardData[] = [
   {
     id: '4',
     title: 'Des expériences inoubliables en famille',
-    description: 'Entre villages pittoresques, marchés publics animés et escapades...',
+    description: 'Entre villages pittoresques, marchés publics animés et escapades sur la route du littoral, Saint-Raphaël propose un cadre idéal pour partager des moments inoubliables. La diversité des activités en plein air fait de la région une destination prisée par les amateurs de découvertes et d’aventures en famille.',
     imageUrl: FAMILLE_IMG,
     variant: 'default'
   },
   {
     id: '5',
     title: 'L\'évasion en pleine nature',
-    description: 'Le Massif de l\'Estérel déploie ses roches rouges entre ciel et mer...',
+    description: 'Le Massif de l’Estérel déploie ses roches rouges entre ciel et mer, offrant des panoramas spectaculaires. Randonnées, balades côtières et sentiers sauvages permettent de s’imprégner d’un environnement préservé, idéal pour une parenthèse hors du temps.',
     imageUrl: NATURE_IMG,
     links: [
       { text: 'Grand Canyon du Verdon', url: '#' }
