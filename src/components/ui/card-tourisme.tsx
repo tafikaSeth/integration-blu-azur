@@ -3,7 +3,7 @@ import type { TouristCardProps } from "../../types";
 const TouristCard: React.FC<TouristCardProps> = ({ data, className = '' }) => {
   const getCardClasses = () => {
     const baseClasses = "relative overflow-hidden rounded-4xl bg-cover bg-center group cursor-pointer transition-transform duration-300 hover:scale-105 w-full";
-    return `${baseClasses} h-48 sm:h-56 md:h-64 lg:h-72`;
+    return `${baseClasses} h-60 sm:h-56 md:h-64 lg:h-72`;
   };
 
   return (
@@ -16,13 +16,13 @@ const TouristCard: React.FC<TouristCardProps> = ({ data, className = '' }) => {
           {data.title}
         </h3>
 
-        <p className="text-xs sm:text-sm opacity-90 mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
+        <p className="text-xs sm:text-sm opacity-90 mb-2 sm:mb-3 line-clamp-2 sm:line-clamp-3 break-words leading-relaxed">
           {data.description}
         </p>
+
         {data.links && (
           <div className="mb-3 sm:mb-4">
             <p className="text-xs opacity-75 mb-1">À voir :
-
               {data.links.map((link, index) => (
                 <span key={index}>
                   <a
@@ -42,13 +42,11 @@ const TouristCard: React.FC<TouristCardProps> = ({ data, className = '' }) => {
         )}
 
         {data.buttonText && (
-          <button className="self-start text-white border border-white text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-colors duration-200 flex items-center gap-2">
-            <span className="truncate">{data.buttonText}</span>
-            <span
-              className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full border"
-            >
+          <button className="self-start text-white border border-white text-xs sm:text-sm px-3 sm:px-3 md:px-4 py-2 sm:py-1.5 md:py-2 rounded-full transition-colors duration-200 flex items-center gap-2 sm:gap-2 hover:bg-white hover:text-gray-800 max-w-full">
+            <span className="truncate min-w-0 flex-1">{data.buttonText}</span>
+            <span className="flex items-center justify-center w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full border flex-shrink-0">
               <svg
-                className="w-3 h-3 flex-shrink-0"
+                className="w-3 h-3 sm:w-3 sm:h-3 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -63,10 +61,9 @@ const TouristCard: React.FC<TouristCardProps> = ({ data, className = '' }) => {
             </span>
           </button>
         )}
-
       </div>
     </div>
   );
 };
 
-export default TouristCard
+export default TouristCard;
