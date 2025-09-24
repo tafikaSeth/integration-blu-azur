@@ -5,7 +5,7 @@ import CustomButton from "../components/ui/button";
 const LocationSection: React.FC = () => {
 
     return (
-        <div>
+        <div id="localisation">
             <section className="w-full max-w-7xl mx-auto p-4 sm:p-6">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">

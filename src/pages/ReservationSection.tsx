@@ -7,6 +7,7 @@ const ReservationsSection: React.FC = () => {
 
     return (
         <section
+            id="reservation"
             className="relative w-full bg-cover bg-center text-white"
             style={{ backgroundImage: `url(${BACKGROUND_RESERVATION_IMAGE})` }}
         >

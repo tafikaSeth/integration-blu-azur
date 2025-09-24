@@ -8,6 +8,7 @@ const SaintRaphaelSection: React.FC = () => {
 
     return (
         <section
+            id="activites"
             className="relative text-white py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center"
             style={{ backgroundImage: `url(${BACKGROUND_SAINT_IMAGE})` }}
         >

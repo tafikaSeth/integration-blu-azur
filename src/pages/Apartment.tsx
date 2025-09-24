@@ -8,7 +8,7 @@ const AppartementSection: React.FC = () => {
     const { isMobile } = useResponsive()
 
     return (
-        <section className="relative py-10">
+        <section id="apropos" className="relative py-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     <div className="flex-1 w-full text-gray-900 order-last lg:order-first px-4 sm:px-6 md:px-0 max-w-2xl mx-auto">

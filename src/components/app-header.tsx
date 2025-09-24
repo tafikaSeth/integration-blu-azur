@@ -10,6 +10,14 @@ const Navbar: React.FC = () => {
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const handleClick = (id: string) => {
+    setActive(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+  };
+
   useEffect(() => {
     if (containerRef.current) {
       const activeEl = containerRef.current.querySelector<HTMLButtonElement>(
@@ -42,7 +50,7 @@ const Navbar: React.FC = () => {
           (scrolled ? "bg-black/50 backdrop-blur-md" : "bg-transparent")
         }
       >
-        <img src={LOGO} alt="Logo" className="h-8 md:h-10 w-auto" />
+        <img onClick={() => handleClick("home")} src={LOGO} alt="Logo" className="h-8 md:h-10 w-auto cursor-pointer" />
         <div
           ref={containerRef}
           className="hidden md:flex items-center space-x-8 relative"
@@ -51,8 +59,8 @@ const Navbar: React.FC = () => {
             <button
               key={item.id}
               data-id={item.id}
-              onClick={() => setActive(item.id)}
-              className={`relative pb-1 transition-colors ${active === item.id
+              onClick={() => handleClick(item.id)}
+              className={`relative pb-1 transition-colors cursor-pointer ${active === item.id
                 ? "text-white"
                 : "text-gray-300 hover:text-white"
                 }`}
@@ -67,25 +75,25 @@ const Navbar: React.FC = () => {
               width: underlineStyle.width,
             }}
           />
-          <button className="hidden md:block bg-blue-500 hover:bg-blue-600 px-4 py-1 rounded-full text-white font-medium">
+          <button onClick={() => handleClick("reservation")} className="hidden cursor-pointer md:block bg-blue-500 hover:bg-blue-600 px-4 py-1 rounded-full text-white font-medium">
             Réservé
           </button>
-            <button className="ml-4 text-white hover:text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
+          <button className="ml-4 text-white hover:text-gray-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
         <button
           className="md:hidden text-white"
@@ -120,6 +128,7 @@ const Navbar: React.FC = () => {
             <button
               key={item.id}
               onClick={() => {
+                handleClick(item.id);
                 setActive(item.id);
                 setIsOpen(false);
               }}
@@ -131,7 +140,7 @@ const Navbar: React.FC = () => {
               {item.label}
             </button>
           ))}
-          <button className="w-full bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-white font-medium">
+          <button onClick={() => handleClick("reservation")} className="w-full bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-white font-medium">
             Réservé
           </button>
         </div>
